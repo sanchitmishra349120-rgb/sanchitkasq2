@@ -1,162 +1,475 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+/* =========================
+   BASIC STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    color:white;
+html {
+    scroll-behavior: smooth;
 }
 
-.hero{
-    height:100vh;
-    background:url("https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop")
-    center/cover no-repeat;
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
 }
 
-.overlay{
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.6);
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 8%;
+
+    z-index: 10;
 }
 
-nav{
-    position:absolute;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
+.logo {
+    color: white;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
 }
 
-.logo{
-    color:#00d9ff;
+.nav-buttons {
+    display: flex;
+    gap: 8px;
 }
 
-nav ul{
-    display:flex;
-    list-style:none;
+.nav-buttons a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 9px 16px;
+
+    border: 1px solid white;
+
+    border-radius: 20px;
+
+    font-size: 14px;
 }
 
-nav li{
-    margin-left:25px;
+.nav-buttons a:hover {
+    background-color: white;
+    color: #222;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 10%;
+
+    color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7");
+
+    background-size: cover;
+
+    background-position: center;
 }
 
-nav a:hover{
-    color:#00d9ff;
+.home-content {
+    max-width: 650px;
 }
 
-.hero h1{
-    font-size:55px;
+.small-heading {
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
 }
 
-.hero p{
-    margin:20px 0;
-    font-size:22px;
+.home h1 {
+    font-size: 60px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
 }
 
-button{
-    padding:12px 28px;
-    margin:10px;
-    border:none;
-    border-radius:30px;
-    background:#00d9ff;
-    color:black;
-    font-weight:bold;
-    cursor:pointer;
+.home-content > p:not(.small-heading) {
+    font-size: 18px;
+
+    margin-bottom: 30px;
 }
 
-.btn2{
-    background:white;
+.explore-button {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background-color: white;
+
+    color: #222;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
 }
 
-button:hover{
-    transform:scale(1.05);
-    transition:.3s;
+.explore-button:hover {
+    background-color: #222;
+
+    color: white;
 }
 
-#about,#contact{
-    padding:70px 20px;
-    text-align:center;
-    color:black;
+
+/* =========================
+   PLACES
+========================= */
+
+.places {
+    padding: 80px 8%;
+
+    text-align: center;
+
+    background-color: #f7f7f7;
 }
 
-#about p{
-    width:70%;
-    margin:auto;
-    margin-top:20px;
-    line-height:1.7;
+.places h2,
+.about h2,
+.booking h2,
+.contact h2 {
+    font-size: 36px;
+
+    margin-bottom: 12px;
 }
 
-form{
-    width:420px;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
+.section-text {
+    color: #666;
+
+    margin-bottom: 40px;
 }
 
-input,
-textarea{
-    padding:15px;
-    margin:12px 0;
-    border:1px solid #ccc;
-    border-radius:8px;
+.place-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
 }
 
-form button{
-    color:black;
+.place {
+    background-color: white;
+
+    width: 30%;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-footer{
-    background:#111;
-    text-align:center;
-    padding:20px;
+.place h3 {
+    font-size: 24px;
+
+    margin-bottom: 12px;
 }
 
-@media(max-width:768px){
+.place p {
+    color: #666;
 
-nav{
-    flex-direction:column;
-    position:static;
-    background:#111;
+    margin-bottom: 20px;
 }
 
-nav ul{
-    flex-direction:column;
-    margin-top:10px;
+.place button {
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background-color: #222;
+
+    color: white;
+
+    cursor: pointer;
 }
 
-nav li{
-    margin:10px 0;
+.place button:hover {
+    background-color: #555;
 }
 
-.hero h1{
-    font-size:35px;
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 80px 10%;
+
+    text-align: center;
+
+    background-color: white;
 }
 
-.hero p{
-    font-size:18px;
+.about p {
+    max-width: 750px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #555;
 }
 
-form{
-    width:90%;
+
+/* =========================
+   BOOKING FORM
+========================= */
+
+.booking {
+    padding: 80px 20px;
+
+    background-color: #f7f7f7;
+
+    text-align: center;
 }
 
-#about p{
-    width:90%;
+form {
+    max-width: 550px;
+
+    margin: 30px auto 0;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
+
+    text-align: left;
 }
 
+form label {
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+form textarea {
+    height: 100px;
+
+    resize: none;
+}
+
+.submit-button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #222;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background-color: #222;
+
+    color: white;
+}
+
+.contact p {
+    margin-top: 8px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #111;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+
+    .navbar {
+        position: absolute;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .nav-buttons {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .nav-buttons a {
+        font-size: 13px;
+
+        padding: 7px 12px;
+    }
+
+
+    /* Home */
+
+    .home {
+        min-height: 100vh;
+
+        padding: 150px 25px 60px;
+
+        text-align: center;
+
+        justify-content: center;
+    }
+
+    .home h1 {
+        font-size: 42px;
+    }
+
+    .home-content > p:not(.small-heading) {
+        font-size: 16px;
+    }
+
+
+    /* Places */
+
+    .places {
+        padding: 60px 20px;
+    }
+
+    .place-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .place {
+        width: 100%;
+
+        max-width: 400px;
+    }
+
+
+    /* About */
+
+    .about {
+        padding: 60px 25px;
+    }
+
+
+    /* Form */
+
+    .booking {
+        padding: 60px 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+
+    /* Headings */
+
+    .places h2,
+    .about h2,
+    .booking h2,
+    .contact h2 {
+        font-size: 30px;
+    }
 }
