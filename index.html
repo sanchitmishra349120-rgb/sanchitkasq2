@@ -1,74 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechNova</title>
+
+    <title>Travel Explorer</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <nav>
-        <h2 class="logo">TechNova</h2>
+    <!-- Navigation Bar -->
 
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+
+        <div class="logo">
+            TravelX
+        </div>
+
+        <div class="nav-buttons">
+            <a href="#home">Home</a>
+            <a href="#places">Places</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
     </nav>
-</header>
 
-<section class="hero">
 
-    <div class="overlay">
+    <!-- Home Section -->
 
-        <h1>Welcome to TechNova</h1>
+    <section id="home" class="home">
 
-        <p>Design. Develop. Innovate.</p>
+        <div class="home-content">
 
-        <button>Get Started</button>
-        <button class="btn2">Learn More</button>
+            <p class="small-heading">
+                EXPLORE THE WORLD
+            </p>
 
-    </div>
+            <h1>
+                Discover Your<br>
+                Next Adventure
+            </h1>
 
-</section>
+            <p>
+                Explore beautiful destinations and create
+                unforgettable memories.
+            </p>
 
-<section id="about">
+            <a href="#booking" class="explore-button">
+                Explore Now
+            </a>
 
-    <h2>About Us</h2>
+        </div>
 
-    <p>
-        TechNova is a modern web development company that creates
-        responsive and attractive websites using HTML, CSS and JavaScript.
-    </p>
+    </section>
 
-</section>
 
-<section id="contact">
+    <!-- Places Section -->
 
-<h2>Contact Us</h2>
+    <section id="places" class="places">
 
-<form>
+        <h2>Popular Destinations</h2>
 
-<input type="text" placeholder="Your Name" required>
+        <p class="section-text">
+            Find your perfect destination for your next trip.
+        </p>
 
-<input type="email" placeholder="Your Email" required>
+        <div class="place-container">
 
-<textarea rows="5" placeholder="Your Message"></textarea>
+            <div class="place">
+                <h3>Mountains</h3>
+                <p>
+                    Enjoy peaceful views and fresh mountain air.
+                </p>
 
-<button type="submit">Send Message</button>
+                <button>
+                    View Place
+                </button>
+            </div>
 
-</form>
 
-</section>
+            <div class="place">
+                <h3>Beaches</h3>
+                <p>
+                    Relax beside beautiful beaches and sunsets.
+                </p>
 
-<footer>
+                <button>
+                    View Place
+                </button>
+            </div>
 
-<p>© 2026 TechNova. All Rights Reserved.</p>
 
-</footer>
+            <div class="place">
+                <h3>Heritage</h3>
+                <p>
+                    Discover history, culture and ancient places.
+                </p>
+
+                <button>
+                    View Place
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+
+    <section id="about" class="about">
+
+        <h2>Why Travel With Us?</h2>
+
+        <p>
+            TravelX helps you discover amazing destinations,
+            plan your trips and make your journey memorable.
+            Start exploring and find a destination that inspires you.
+        </p>
+
+    </section>
+
+
+    <!-- Booking Form -->
+
+    <section id="booking" class="booking">
+
+        <h2>Plan Your Trip</h2>
+
+        <form>
+
+            <label for="name">
+                Your Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label for="email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label for="destination">
+                Choose Destination
+            </label>
+
+            <select id="destination">
+
+                <option>
+                    Select Destination
+                </option>
+
+                <option>
+                    Mountains
+                </option>
+
+                <option>
+                    Beaches
+                </option>
+
+                <option>
+                    Heritage Places
+                </option>
+
+            </select>
+
+
+            <label for="date">
+                Travel Date
+            </label>
+
+            <input
+                type="date"
+                id="date"
+            >
+
+
+            <label for="message">
+                Message
+            </label>
+
+            <textarea
+                id="message"
+                placeholder="Tell us about your trip"
+            ></textarea>
+
+
+            <button
+                type="submit"
+                class="submit-button"
+            >
+                Send Request
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Contact Section -->
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Email: travelx@example.com
+        </p>
+
+        <p>
+            Phone: +91 98765 43210
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 TravelX | Explore More, Live More
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
